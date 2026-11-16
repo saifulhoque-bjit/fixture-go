@@ -11,3 +11,9 @@ func TestTotalCountsEveryItem(t *testing.T) {
 		t.Fatalf("Total(250, 4, 10) mismatch (-want +got): %s", diff)
 	}
 }
+
+func TestTotalWithNoDiscount(t *testing.T) {
+	if got := Total(199, 3, 0); got != 597 {
+		t.Fatalf("Total(199, 3, 0) = %d, want 597", got)
+	}
+}
